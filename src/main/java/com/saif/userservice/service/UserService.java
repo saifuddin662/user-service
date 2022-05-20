@@ -22,7 +22,7 @@ public class UserService {
     public ResponseEntity<?> saveUser(UserEntity userEntity) {
         try {
             userRepository.save(userEntity);
-            return ResponseEntity.status(HttpStatus.OK).body("Save Successfully");
+            return ResponseEntity.status(HttpStatus.OK).body("Save Successfully!");
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Something Went Wrong");
         }
